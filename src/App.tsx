@@ -205,7 +205,7 @@ function CountdownTimer() {
   );
 }
 
-const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwM3r0YQsD1bv065C3imknuKVvQCWtQLy3CTycQCRlZ8UhUUA2npwvbPVL91OV3E2zp/exec";
+const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzK1fIK4zC3cWlzEbT7jvtPzqP4FvAvzqnOqn_HFg1WRKazt1NQB92oftkGmE2MWy3Q5g/exec";
 
 export default function WeddingInvitation() {
   const [isOpened, setIsOpened] = useState(false);
@@ -568,7 +568,11 @@ export default function WeddingInvitation() {
                     </span>
                     {hasGuest && (
                       <span className="block text-[31px] md:text-4xl font-playball text-theme-700 mb-8 capitalize tracking-wide drop-shadow-sm">
-                        {guestPrefix.toLowerCase() === 'dear' ? `Dear ${guestName},` : `Dear ${guestPrefix} ${guestName},`}
+                        {guestPrefix.toLowerCase() === 'dear' 
+                          ? `Dear ${guestName},` 
+                          : guestPrefix.toLowerCase() === 'family' 
+                            ? `Dear ${guestName} and family,` 
+                            : `Dear ${guestPrefix} ${guestName},`}
                       </span>
                     )}
                     <p className="font-serif text-[21px] md:text-2xl leading-[1.8] md:leading-loose text-zinc-700 font-light italic">
@@ -870,7 +874,7 @@ export default function WeddingInvitation() {
                     <div className="h-px w-16 md:w-24 bg-gradient-to-l from-transparent to-theme-300" />
                   </div>
                   <p className="text-stone-300 text-[15px] md:text-base max-w-md mx-auto leading-relaxed mb-16 tracking-wide font-light">
-                    We would be absolutely thrilled to celebrate with you. Kindly RSVP before 2nd September.
+                    We would be absolutely thrilled to celebrate with you. Kindly RSVP before 15th November.
                   </p>
 
                   {/* Premium RSVP Form */}
